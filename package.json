@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint",
     "hardhat": "hardhat",
     "deploy:v2": "hardhat run scripts/deploy_V2.js --network base",
@@ -19,7 +19,7 @@
     "compile": "hardhat compile",
     "compile:via-ir": "hardhat compile --config hardhat.config.js",
     "deploy:v3:robinhood": "hardhat run scripts/deploy_v3.js --network robinhood",
-    "dev:isolated": "node scripts/dev_isolated.js",
+    "dev:isolated": "node init && node scripts/dev_isolated.js",
     "scan:dead-css": "node scripts/scan_dead_css.js"
   },
   "dependencies": {
